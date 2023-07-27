@@ -1,0 +1,29 @@
+﻿@page
+@model InvoiceTracker.Pages.Invoices.NewModel
+@{
+}
+<div>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Invoice.CustomerName" class="form-label">Customer Name</label>
+            <input asp-for="Invoice.CustomerName" class="form-control">
+            <span asp-validation-for="Invoice.CustomerName" class="text text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Invoice.CustomerPhoneNumber" class="form-label">Customer Phone Number</label>
+            <input asp-for="Invoice.CustomerPhoneNumber" class="form-control">
+            <span asp-validation-for="Invoice.CustomerPhoneNumber" class="text text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Invoice.Email" class="form-label">Email</label>
+            <input asp-for="Invoice.Email" class="form-control">
+            <span asp-validation-for="Invoice.Email" class="text text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Invoice.PartDesc" class="form-label">Parts Description</label>
+            <textarea asp-for="Invoice.PartDesc" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Invoice.PartDesc" class="text text-danger"></span>
+        </div>
+        <button type="submit">Submit Invoice</button>
+    </form>
+</div>
